@@ -1,10 +1,15 @@
+<h2>Routing</h2>
 <nav>
     <ul>
-        <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
-        <li><a routerLink="/signup" routerLinkActive="active">Signup</a></li>
-        <li><a routerLink="adminlogin">Admin login</a></li>
-        <li><a routerLink="adminlist">Admin List</a></li>
+        <li><a routerLink="user/login" routerLinkActive="active">Login</a></li>
+        <li><a routerLink="user/signup" routerLinkActive="active">Signup</a></li>
+        <li><a routerLink="admin/login">Admin login</a></li>
+        <li><a routerLink="admin/list">Admin List</a></li>
+      <li><a routerLink="lazy/login">Lazy login</a></li>
+      <li><a routerLink="lazy/list">Lazy List</a></li>
     </ul>
 </nav>
+
+<h2>lazy loading</h2>
 
 <router-outlet></router-outlet>
