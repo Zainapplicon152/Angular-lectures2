@@ -8,11 +8,15 @@ import { UserModule } from "./user/user.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { AdminModule } from "./admin/admin.module";
+import { UserlistComponent } from './userlist/userlist.component';
+import { AdminlistComponent } from './adminlist/adminlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    UserlistComponent,
+    AdminlistComponent,
 
   ],
   imports: [
