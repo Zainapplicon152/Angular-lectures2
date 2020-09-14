@@ -26,4 +26,9 @@ export class AppComponent {
       this.cfr.resolveComponentFactory(UserlistComponent)
     )
   }
+
+  onSubmit(value: any) {
+    console.warn(value);
+
+  }
 }

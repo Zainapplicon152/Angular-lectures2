@@ -10,6 +10,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AdminModule } from "./admin/admin.module";
 import { UserlistComponent } from './userlist/userlist.component';
 import { AdminlistComponent } from './adminlist/adminlist.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,6 +28,9 @@ import { AdminlistComponent } from './adminlist/adminlist.component';
     AppRoutingModule,
     UserModule,
     AdminModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

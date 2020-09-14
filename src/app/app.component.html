@@ -14,5 +14,42 @@
 
 <router-outlet></router-outlet>-->
 
-<button (click)="loadAdmin()">Load Admin</button>
-<button (click)="loadUser()">Load User</button>
+<!--<button (click)="loadAdmin()">Load Admin</button>
+<button (click)="loadUser()">Load User</button>-->
+
+
+<!--<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <label>
+    email
+    <input type="text" name="email" ngModel>
+  </label><br><br>
+  <label>
+    password
+    <input type="password" name="password" ngModel>
+  </label><br><br>
+  <button type="submit">login</button>
+</form>-->
+<div class="col-md-6">
+  <h1>Template driven form</h1>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <p class="h4 mb-4">Sign in</p>
+
+    <!-- Email -->
+    <input type="email" name="email" class="form-control mb-4" placeholder="E-mail" ngModel>
+
+    <!-- Password -->
+    <input type="password" name="password" class="form-control mb-4" placeholder="Password" ngModel>
+
+    <div class="d-flex justify-content-around">
+    </div>
+
+    <!-- Sign in button -->
+    <button class="btn btn-danger" type="submit">Sign in</button>
+
+    <!-- Register -->
+    <p>Not a member?
+      <a href="">Register</a>
+    </p>
+
+  </form>
+</div>
