@@ -29,27 +29,33 @@
   </label><br><br>
   <button type="submit">login</button>
 </form>-->
-<div class="col-md-6">
+<!--<div class="col-md-6">
   <h1>Template driven form</h1>
   <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
     <p class="h4 mb-4">Sign in</p>
 
-    <!-- Email -->
+    &lt;!&ndash; Email &ndash;&gt;
     <input type="email" name="email" class="form-control mb-4" placeholder="E-mail" ngModel>
 
-    <!-- Password -->
+    &lt;!&ndash; Password &ndash;&gt;
     <input type="password" name="password" class="form-control mb-4" placeholder="Password" ngModel>
 
     <div class="d-flex justify-content-around">
     </div>
 
-    <!-- Sign in button -->
+    &lt;!&ndash; Sign in button &ndash;&gt;
     <button class="btn btn-danger" type="submit">Sign in</button>
 
-    <!-- Register -->
+    &lt;!&ndash; Register &ndash;&gt;
     <p>Not a member?
       <a href="">Register</a>
     </p>
 
   </form>
-</div>
+</div>-->
+<h2>Reactive form</h2>
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <input type="text" name="username" formControlName="username"><br><br>
+  <input type="password" name="password" formControlName="password"><br><br>
+  <button type="submit">Login</button>
+</form>

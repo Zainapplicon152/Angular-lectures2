@@ -1,4 +1,5 @@
 import {Component, ViewContainerRef, ComponentFactoryResolver} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,14 @@ import {Component, ViewContainerRef, ComponentFactoryResolver} from '@angular/co
 export class AppComponent {
   title = 'Angular-two';
 
+
   constructor(private ViewComponent: ViewContainerRef, private cfr: ComponentFactoryResolver) {
   }
+
+  loginForm = new FormGroup({
+    username: new FormControl('zain' , Validators.required),
+    password: new FormControl('1234' , Validators.required)
+  });
 
   async loadAdmin() {
     this.ViewComponent.clear();
@@ -30,5 +37,9 @@ export class AppComponent {
   onSubmit(value: any) {
     console.warn(value);
 
+  }
+
+  loginUser() {
+    console.warn(this.loginForm.value);
   }
 }
